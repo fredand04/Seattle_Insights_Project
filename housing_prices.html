@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seattle Housing Costs Over Time</title>
+
+  <!-- Mapbox CSS -->
+  <link
+    href="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.css"
+    rel="stylesheet"
+  />
+  <!-- Your custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Seattle Housing Prices Visualization</h1>
+  </header>
+
+  <main>
+    <section id="map-section">
+      <div id="map"></div>
+      <div id="legend"></div>
+    </section>
+
+    <section id="info-section">
+      <h2>About This Map</h2>
+      <p>
+        This map shows the average home prices across Seattle neighborhoods using data from Zillow (2000–2025).
+        You can interact with the neighborhoods to see housing trends.
+      </p>
+    </section>
+  </main>
+
+  <!-- Mapbox JS -->
+  <script src="https://api.mapbox.com/mapbox-gl-js/v2.16.1/mapbox-gl.js"></script>
+
+  <!-- Your custom JS -->
+  <script src="script-housing.js"></script>
+</body>
+</html>
