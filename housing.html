@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Seattle Housing Prices</title>
+
+  <!-- Mapbox -->
+  <link href="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.css" rel="stylesheet" />
+
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Seattle Insights Project</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="data_analysis.html">Data Analysis</a></li>
+        <li><a href="housing.html" class="active">Housing Prices</a></li>
+        <li><a href="income.html">Income</a></li>
+        <li><a href="about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="map-section">
+      <div class="map-card">
+        <div class="map-header">
+          <h2>Housing Prices Across Seattle Neighborhoods</h2>
+          <p>Hover over a neighborhood to view the average housing cost for <strong>June 2024</strong>.</p>
+        </div>
+        <div id="map">
+          <!-- Legend Button & Popup INSIDE the map -->
+          <div id="legend-container">
+            <button id="legend-toggle">ℹ️ Legend</button>
+            <div id="legend-popup">
+              <button id="legend-close">&times;</button>
+              <h3>Housing Prices (June 2024)</h3>
+              <div class="legend-scale">
+                <div class="legend-item"><span style="background:#f7fcf0"></span> < $300k</div>
+                <div class="legend-item"><span style="background:#ccebc5"></span> $300k–$600k</div>
+                <div class="legend-item"><span style="background:#7bccc4"></span> $600k–$900k</div>
+                <div class="legend-item"><span style="background:#2b8cbe"></span> $900k–$1.2M</div>
+                <div class="legend-item"><span style="background:#084081"></span> > $1.2M</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="slider-container">
+          <label for="month-slider">Select Date:</label>
+          <input type="range" id="month-slider" min="0" max="0" value="0" step="1">
+          <span id="current-date">Loading...</span>
+        </div>
+
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Seattle Insights Project</p>
+  </footer>
+
+  <script src="https://api.mapbox.com/mapbox-gl-js/v3.5.1/mapbox-gl.js"></script>
+  <script src="js/script-housing.js"></script>
+</body>
+</html>
